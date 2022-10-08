@@ -1,0 +1,81 @@
+* {
+    font-family: 'Inter', sans-serif;
+
+}
+
+.bill {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 0.5px solid gray;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.icon-part {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 2.5rem;
+    background-color: rgba(64, 224, 208, 0.253);
+    color: rgb(64, 80, 224);
+}
+
+.addPanel {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: left;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+.addPanel>*{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.nameInput input {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.addPanel input {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+}
+
+.addPanel button {
+    width: 30%;
+}
+
+#trashCan {
+    color: red;
+    font-weight: 200;
+}
+
+#trashCan:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .addPanel{
+        width: 90%;
+    }
+    .addPanel input{
+        padding: 0.5rem;
+    }
+    .addPanel>*{
+        display: flex;
+        flex-direction: column;
+        margin: 1.2rem;
+        font-size: 2rem;
+    }
+
+}
