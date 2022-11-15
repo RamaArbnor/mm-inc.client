@@ -12,7 +12,7 @@ export default function AddPanel(props) {
 
     function addBill() {
         // console.log('aaa')
-        axios.post('https://mm-inc.herokuapp.com/add/bill', {
+        axios.post('https://backend-ivory-phi.vercel.app/add/bill', {
             name: props.name,
             description: description,
             amount: parseFloat(amount),

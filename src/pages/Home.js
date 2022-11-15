@@ -30,7 +30,7 @@ export default function Home(props) {
     let data;
 
     function getBills() {
-        axios.get('https://mm-inc.herokuapp.com/bills')
+        axios.get('https://backend-ivory-phi.vercel.app/bills')
             .then(function (response) {
                 // handle success
                 data = response.data
@@ -94,7 +94,7 @@ export default function Home(props) {
     function payBills() {
         for(let i = 0; i < bills.length; i++ ){
             let id = bills[i]._id
-            axios.patch('https://mm-inc.herokuapp.com/pay', {
+            axios.patch('https://backend-ivory-phi.vercel.app/pay', {
                 id: id
               })
               .then(function (response) {
