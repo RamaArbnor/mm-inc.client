@@ -37,12 +37,12 @@ export default function Home(props) {
 
                 let temp = 0
 
-                console.log('data gor')
-                console.log(data)
+                // console.log('data gor')
+                // console.log(data)
                 // setBills(billss)
                 for (let i = 0; i < data.length; i++) {
                     temp = temp + parseFloat(data[i].amount.$numberDecimal)
-                    console.log(temp)
+                    // console.log(temp)
 
                 }
 
@@ -51,7 +51,7 @@ export default function Home(props) {
                 for (let i = 0; i < data.length; i++) {
                     if (data[i].name === username) {
                         userTotal = userTotal + parseFloat(data[i].amount.$numberDecimal)
-                        console.log(userTotal)
+                        // console.log(userTotal)
 
                     }
 
@@ -81,13 +81,13 @@ export default function Home(props) {
     // onMount
     useEffect(() => {
         getBills()
-        console.log('usefect: ' + bills)
+        // console.log('usefect: ' + bills)
 
     }, [total !== 0]);
 
     useEffect(() => {
         // getBills()
-        console.log('update' + bills)
+        // console.log('update' + bills)
 
     }, []);
 
@@ -98,7 +98,7 @@ export default function Home(props) {
                 id: id
               })
               .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 dashboardClick()
               })
               .catch(function (error) {
@@ -214,7 +214,7 @@ export default function Home(props) {
                                 id={bill._id}
                                 icon='fa-solid fa-money-bills'
                                 name={bill.name}
-                                date={bill.date}
+                                date={bill.date.split('T')[0].replace(/-/g, ' ')}
                                 description={bill.description}
                                 amount={bill.amount.$numberDecimal}
                                 function={dashboardClick}

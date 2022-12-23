@@ -19,8 +19,8 @@ export default function AddPanel(props) {
             paid: false
         })
             .then(response => {
-                console.log(response)
-                console.log('aaa')
+                // console.log(response)
+                // console.log('aaa')
                 props.handleClick()
     })
             .catch(error => {console.log(error)});
@@ -28,14 +28,16 @@ export default function AddPanel(props) {
     }
 
     return (
-        <div className="addPanel">
-            <h2>Add Bill</h2>
-            <div className="nameInput" >Name: <input value={props.name} readonly="readonly"></input></div>
-            <div>Description: <input onChange={(e) => { setDescription(e.target.value) }}></input></div>
-            <div>Amount: <input type="number" onChange={(e) => { setAmount(e.target.value) }}></input></div>
-            <button onClick={addBill}>Add</button>
+            <div className="addPanel">
+                <h2>Add Bill</h2>
 
-        </div>
+                <div className="nameInput" >Name: <input value={props.name} readonly="readonly"></input></div>
+                
+                <div>Description: <input onChange={(e) => { setDescription(e.target.value) }}></input></div>
+                <div>Amount: <input type="number" onChange={(e) => { setAmount(e.target.value) }}></input></div>
+                <button onClick={addBill}>Add</button>
+
+            </div>
     )
 }
 

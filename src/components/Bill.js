@@ -7,7 +7,7 @@ export default function Bill(props) {
     function deleteBill(){
         axios.delete(`https://backend-ivory-phi.vercel.app/delete/${props.id}`)
               .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 // dashboardClick()
                 props.function()
               })
@@ -27,10 +27,10 @@ export default function Bill(props) {
             <p>{props.name}</p>  
             <p>{props.date}</p>
             <p>{props.description}</p>
-            <p>${props.amount}</p>   
+            <p className='amount'>$ {props.amount}</p>   
 
             {props.deleteable && <i onClick={deleteBill} id='trashCan' class="fa-regular fa-trash-can"></i>}
-            
+            {!props.deleteable && <p></p>}
 
         </div>
     )

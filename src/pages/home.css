@@ -108,6 +108,7 @@
 }
 
 .bill-section {
+    /* display: flex; */
     margin-top: 3rem;
     overflow: auto;
     margin: 1rem;
